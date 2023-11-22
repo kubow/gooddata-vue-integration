@@ -1,9 +1,11 @@
 <script setup>
-  import DefaultGoodDataComponent from './components/DefaultGoodDataComponent.vue';
+  // import DefaultGoodDataComponent from './components/DefaultGoodDataComponent.vue';
+  import TokenAuthComponent from './components/TokenAuthComponent.vue';
 </script>
 
 <template>
-  <DefaultGoodDataComponent />
+  <!-- <DefaultGoodDataComponent /> -->
+  <TokenAuthComponent />
 </template>
 
 <style scoped>
