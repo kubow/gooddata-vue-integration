@@ -8,6 +8,9 @@
   </template>
   
   <script>
+  
+  // Custom element: https://github.com/karol-f/vue-custom-element
+  // or a more sophisticated way  
   export default {
     mounted() {
       // Load the web component script dynamically
@@ -39,4 +42,11 @@
       },
     },
   };
+      
+      // another alternative
+      //import vueCustomElement from 'vue-custom-element';
+      //import {GoodInsight, GoodDashboard} from 'https://demos.cloud.gooddata.com/components/ecommerce-parent-aj-jaurigue.js?auth=sso';
+      //Vue.use(vueCustomElement);
+      //Vue.customElement('<gd-insight', Insight);
+      //Vue.customElement('<gd-dashboard', Dashboard);
   </script>
