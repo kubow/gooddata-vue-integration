@@ -4,9 +4,9 @@
 
   setContext({
     backend: factory()
-      .onHostname("https://demos.cloud.gooddata.com")
-      .withAuthentication(new TigerTokenAuthProvider("amFrdWIudmFqZGE6dnVlOmlXdGhEUmJqSnpHdEVORllCci92dWtySEllUnVXL3VF")),
-    workspaceId: "ecommerce-parent-dev",
+      .onHostname("https://____.cloud.gooddata.com")
+      .withAuthentication(new TigerTokenAuthProvider("__your_token__")),
+    workspaceId: "__your_workspace_id__",
   });
 
 </script>
@@ -16,7 +16,7 @@
         <div id="left">
             <p>Left side with an Insight:</p>
             <gd-insight 
-                insight="8e8f236e-1bb2-48b3-828e-48706c684629"
+                insight="__your_visual_id__"
                 title="top 10 performers" 
                 style="height: 700px;"
             >
@@ -25,7 +25,7 @@
         <div id="right">
             <p>Right side with the dashboard:</p>
             <gd-dashboard 
-                dashboard="092929af-375a-4e9c-964f-2add8cdbd259"
+                dashboard="__your_dashboard_id__"
             >
             </gd-dashboard>
         </div>
