@@ -1,4 +1,5 @@
 
+// This library does not work without introducing React library to the project
 import tigerFactory, { ContextDeferredAuthProvider, redirectToTigerAuthentication } from "@gooddata/sdk-backend-tiger";
 import { BackendProvider, WorkspaceProvider } from "@gooddata/sdk-ui";
 
