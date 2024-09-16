@@ -1,6 +1,6 @@
 # vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+This project should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
@@ -14,6 +14,8 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+cp .env.template .env
+# fill variables
 ```
 
 ### Compile and Hot-Reload for Development
