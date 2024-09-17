@@ -1,5 +1,19 @@
 <script setup>
-    import 'https://demos.cloud.gooddata.com/components/ecommerce-parent-dev.js?auth=sso'; 
+    import { onMounted } from 'vue';
+
+    onMounted(() => {
+        // Construct the URL using environment variables
+        const scriptUrl = `${import.meta.env.VITE_HOST}components/${import.meta.env.VITE_WORKSPACE}.js?auth=sso`;
+        console.log(scriptUrl);
+        // Check if the script is already loaded to prevent adding it multiple times
+        if (!document.querySelector(`script[src="${scriptUrl}"]`)) {
+            // Dynamically create and add the script tag
+            const script = document.createElement('script');
+            script.src = scriptUrl;
+            script.type = 'module'; // Use 'module' for ES modules
+            document.head.appendChild(script);
+        }
+    });
 </script>
 
 <template>
@@ -7,7 +21,7 @@
         <div id="left">
             <p>Left side with an Insight:</p>
             <gd-insight 
-                insight="8e8f236e-1bb2-48b3-828e-48706c684629"
+                insight={{import.meta.env.VITE_VISUALIZATION}}
                 title="top 10 performers" 
                 style="height: 700px;"
             >
@@ -16,11 +30,11 @@
         <div id="right">
             <p>Right side with the dashboard:</p>
             <gd-dashboard 
-                dashboard="092929af-375a-4e9c-964f-2add8cdbd259"
+                dashboard={{import.meta.env.VITE_DASHBOARD}}
             >
             </gd-dashboard>
         </div>
-  </div>
+    </div>
 </template>
 
 <style scoped>
